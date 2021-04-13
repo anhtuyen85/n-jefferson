@@ -1,0 +1,83 @@
+/* Section icon box */
+#shopify-section-section-iconbox {
+    .home-icon-box .d-grid > div {
+        @media (max-width: 767px) {
+            margin-right: -15px; 
+            margin-left: -15px;            
+        }
+    }
+} 
+.home-icon-box {         
+    .d-grid > div {
+        &:not(:last-child) {  
+            border-bottom: 1px solid var(--body-border-color);
+            @media (min-width: 768px) {  
+                border-bottom: none;                
+                @include border-inline-end(1px, solid, var(--body-border-color));
+            }                 
+        }
+    }    
+    .card_section-item-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+        height: 100%;
+        .card_section-header {            
+            .image__style {
+                min-width: var(--gutter-sm);
+            }
+        }
+    }    
+    .card_section-info {
+        p {
+           margin: 0;                             
+        }
+        .card_section-title {
+            @extend %fw-custom; 
+            margin: 0;
+        }
+    }
+    &.style-1 {        
+        .card_section-item-inner {
+            padding: 11px;
+        }
+        .card_section-header {               
+            @include margin-end(var(--gutter-ct));  
+        }
+        .card_section-info .card_section-title {
+            @extend %font-size-2;     
+        }            
+    }
+    &.style-2 {
+        .card_section-item-inner {
+            flex-direction: column;
+            text-align: center;
+            padding: var(--gutter-lg) var(--gutter-xs);
+            @media (min-width: 768px) {
+                padding: 0 var(--gutter-xs);
+            }
+            .card_section-header {
+                margin-bottom: var(--gutter-sm);    
+                .image__style {
+                    min-width: 48px;
+                }            
+            }
+        }    
+        .card_section-info {
+            p:not(.card_section-title) {
+                margin-top: var(--gutter-sm);
+            }
+            .card_section-title {
+                line-height: 1.2;
+                font-size: calc(var(--heading-size-h6) + 0.1rem);
+            }
+        }
+    }
+    &.border-top-true {
+        border-top: 1px solid var(--body-border-color);
+    }
+    &.border-bottom-true {
+        border-bottom: 1px solid var(--body-border-color);
+    }
+}
+/* End Section icon box */

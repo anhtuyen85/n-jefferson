@@ -1,0 +1,71 @@
+/* Section Testimonials */
+.home-testimonials {    
+    .d-grid.slide_ui-element {
+        -ms-flex-wrap: nowrap !important;
+        flex-wrap: nowrap !important;
+        overflow: hidden;
+    }
+    .card_section-item-inner {
+        padding: var(--gutter-sm);              
+        @extend %radius-4px;
+        p {
+            margin: 0 0 7px;         
+        } 
+        @media (min-width: 576px) {
+            padding: var(--gutter-lg);
+            p {
+                margin-bottom: var(--gutter-xs);
+            }
+        }              
+        .card_testimonial-review {            
+            line-height: 1.45;
+            @extend %body-font-size;
+            @media (min-width: 576px) {
+                font-size: calc(var(--body-font-size) + 0.2rem);
+                line-height: 28px; 
+            }
+        }
+        .card_testimonial-author {
+            font-size: calc(var(--body-font-size) - 0.3rem);
+            @extend %fw-custom;             
+        }
+    }
+    .tns-nav {        
+        @media (min-width: 576px) {
+            margin-top: var(--gutter-lg);
+        }
+    }
+    &.layout-full, &.layout-full-right {
+        position: relative;
+        > .section_content-wrapper {
+            > .section_content-body {
+                position: static;
+                .slide_ui-controls--nav .slide_ui-btn-prev {
+                    left: 0;
+                    @media (min-width: 1335px) {
+                        left: calc(calc(100vw - 1318px) / 2);            
+                    }                
+                }                 
+            } 
+        }
+        .slide_ui-controls--nav {
+            .slide_ui-btn-next {
+                right: 0;
+                @media (min-width: 1335px) {
+                    right: calc(calc(100vw - 1318px) / 2);            
+                }                
+            }            
+        }
+    }
+    &.layout-full-right {
+        .slide_ui-controls--dot {
+            @include ab(n, 50%, 15px, n);
+            transform: translate(-50%, 0);
+            margin-top: 0;
+        }
+        .tns-ovh {
+            overflow: visible;
+        }
+    }
+}
+/* End Section Testimonials */

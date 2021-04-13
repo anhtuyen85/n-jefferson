@@ -1,0 +1,29 @@
+/* Section Newsletter - Newsletter in the page */
+.home-newsletter,
+.block-newsletter {
+    .form-subscribe {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        .form-control {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 0 var(--gutter-xxs);
+            @media (min-width: 576px) {
+                max-width: 330px;
+                @include margin-end(var(--gutter-xxs));
+            }
+        }
+        .btn {
+            margin: 0 0 var(--gutter-xxs);
+            padding-left: var(--gutter-xlg);                
+            padding-right: var(--gutter-xlg);                
+        }
+        .form-subscribe-notify {
+            display: flex;
+            text-align: center;
+        }
+    }
+}
+/* End Section Newsletter - Newsletter in the page */

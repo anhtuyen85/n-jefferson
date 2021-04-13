@@ -1,0 +1,27 @@
+/* Section Categories */
+.home-categories {
+    .section_content-wrapper {
+        .blog-section {
+            margin-bottom: var(--gutter-lg);
+        }
+        .card_section-item-inner {
+            // text-align: center;       
+            .card_section-header {
+                margin: 0 auto var(--gutter-xlg);
+            }
+            .card_section-info {
+                p {
+                    margin: 0;             
+                    font-size: calc(var(--body-font-size) + 0.3rem);
+                    @extend %section-heading-cl;
+                    @extend %fw-custom-1;
+                }
+            }
+        }
+        .section_content-footer {
+            text-align: center;       
+            margin: var(--gutter-lg) auto 0;
+        }
+    }
+}
+/* End Section Categories */

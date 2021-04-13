@@ -1,0 +1,39 @@
+.featured_block-banner {
+    @extend %effect-image;
+    overflow: visible;   
+    &:hover {
+        @media (min-width: 1025px) {
+            @include effect-image-hover;
+        }
+    }                
+    .image__style {
+        overflow: hidden;
+        @extend %radius-4px;
+    }
+    .featured_block-content {
+        &.overlay-ui {
+            padding: 12% 10%; 
+            @media (min-width: 1200px) {
+                padding: 35px 30px;
+            }
+        }
+    }    
+    .block_content-text-1 {
+        line-height: 1.3;
+        font-size: calc(var(--body-font-size) + 0.4rem);            
+        margin: 0 0 5px;
+        @extend %section-heading-cl;
+        @extend %fw-custom-1;
+    }
+    .block_content-text-2 {
+        font-size: 4rem;
+        line-height: 1.2;
+        color: var(--price-sale-color);
+        margin: 0 0 14px;
+        font-weight: 700;
+    }
+    .btn {
+        padding: 0 18px;
+        font-size: calc(var(--body-font-size) - 0.3rem);     
+    }
+}   

@@ -1,0 +1,32 @@
+.featured_block-product_recommend {
+    .recommendation-title {
+        line-height: 1.2;
+        margin: 0 0 var(--gutter-sm);
+        font-size: calc(var(--heading-size-h6) + 0.4rem);
+        @extend %section-heading-cl;
+        @extend %fw-custom;
+    }
+    .recommendation-products {
+        @extend %border-product-grid;
+        .product-section:last-child {
+            border-bottom: none;
+        }
+    }
+}
+.section-product-recommendation {
+    margin: 50px 0 0;
+    @media (min-width: 768px) {
+        margin-top: 80px;
+    }
+    .tns-inner { 
+        @extend %radius-4px;
+    }
+    &.bg-image .tns-inner {
+        background: var(--body-bg-color);
+    }
+    &.home-products-grid .tns-slider .product-section.tns-item:not(.tns-slide-active) {
+        @media (max-width: 1024px) {
+            @include border-inline-end(1px, solid, var(--body-border-color));
+        }
+    }
+}

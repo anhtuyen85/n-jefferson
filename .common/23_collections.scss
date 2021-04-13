@@ -1,0 +1,38 @@
+/* Collection */
+#collections-listing {  
+    .collection-image {
+        margin: 0 auto var(--gutter-sm);
+        @extend %effect-image;
+        @media (min-width: 1025px) {
+            &:hover {
+                @include effect-image-hover;
+            }
+        }
+    }
+    .collection-item {
+        padding: var(--gutter-xs);
+        border-bottom: 1px solid var(--body-border-color);
+        @include border-inline-end(1px, solid, var(--body-border-color));
+        @media (min-width: 768px) {
+            padding: var(--gutter-md);
+        }
+    }
+    .collection-title {
+        a {
+            font-size: var(--heading-size-h6);
+            font-weight: var(--heading-6-weight);
+            @media (min-width: 1025px) {
+                &:hover {
+                    color: var(--special-border);
+                }
+            }
+        }
+    }
+    .page-content {
+        @extend %border-product-grid;
+        .row {
+            margin: 0;            
+        }
+    }
+}
+/* End Collection */
