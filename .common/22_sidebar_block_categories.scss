@@ -1,19 +1,42 @@
 .featured_block-category {
     .menu_list-header {
         p {
-            margin: 0 0 8px;
-            font-size: calc(var(--body-font-size) + 0.4rem);            
-            @extend %section-heading-cl;
-            @extend %fw-custom-1;
-        }
+            margin: 0 0 var(--gutter-xs);
+            font-size: 26px;   
+            display: flex;
+            align-items: center;
+            justify-content: space-between;     
+            font-weight: 700;      
+            position: relative;  
+            line-height: 30px; 
+            @include padding-start(30px);      
+            &:before {
+                content: '';
+                width: 16px;
+                height: 3px;
+                background: var(--body-color);
+                @include ab(15px, 0, n, n);
+            }
+        }  
     }   
+    .menu_list-body::-webkit-scrollbar-track {
+        @extend %webkit-scrollbar-track;
+    }
+    .menu_list-body::-webkit-scrollbar {
+        @extend %webkit-scrollbar;
+    }
+    .menu_list-body::-webkit-scrollbar-thumb {
+        @extend %webkit-scrollbar-thumb;
+    }
     .menu_list-body {
+        max-height: 210px;   
+        overflow-y: auto;          
         ul {
             @extend %list-style-reset;
             li {                
                 a {
                     display: inline-block;
-                    position: relative;
+                    position: relative;                    
                     &:after {
                         content: '';
                         width: 0;
@@ -21,24 +44,25 @@
                         @extend %transition;
                         @include ab(n, 0, 0, n);
                     }
-                }
+                }               
             }             
             &.menu_list-wrapper {
                 > li {
-                    padding: var(--gutter-xxs) 0;
+                    padding: 5px 0;
                     > a {                        
-                        @extend %fw-custom-1;                     
-                        line-height: 1.1;
-                        font-size: calc(var(--body-font-size) + 0.2rem);
-                        @media (min-width: 1025px) {
-                            &:hover {                                
-                                color: var(--body-link-hover);  
-                                &:after {
-                                    width: 100%;
-                                    background: var(--body-link-hover);  
-                                }
-                            }
-                        }
+                        @include padding-start(35px);
+                        font-weight: 700;
+                        line-height: 24px;
+                        font-size: 18px;                       
+                        &:before {
+                            content: '';
+                            width: 16.5px;
+                            height: 18px;
+                            border: 3px solid#000;                
+                            border-radius: 2px;
+                            @extend %transition;
+                            @include ab(3px, 0, n, n);                                                
+                        }                       
                     }
                     .dropdown-menu {
                         position: static;
@@ -64,23 +88,13 @@
                                 padding-bottom: var(--gutter-xxs);
                             }
                             &.active {
-                                > a {
-                                    @extend %fw-custom;
-                                    &:after {
-                                        width: 100%;
-                                        background: var(--body-link);  
-                                    }
-                                }
+                                
                             }
                         }
                     }  
                     &.active {
                         > a {
-                            color: var(--body-link-hover);  
-                            &:after {
-                                width: 100%;
-                                background: var(--body-link-hover);  
-                            }
+                            color: var(--body-link-hover);                             
                         }
                     }                  
                 }

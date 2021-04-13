@@ -1,7 +1,6 @@
 /* Footer */
 .section-footer-widget {  
-    background: #31588E;  
-    padding: 30px 0 10px;   
+    background: #31588E;      
     color: var(--footer-copyright-cl);
     @media (min-width: 768px) {
         padding: 0 0 30px;   
@@ -12,8 +11,7 @@
         }
     }   
 }
-.card_footer-item {
-    margin: 0 0 var(--gutter-lg);   
+.card_footer-item {    
     .card_footer-title {
         margin: 0 0 17px;
         color: var(--footer-heading-cl);

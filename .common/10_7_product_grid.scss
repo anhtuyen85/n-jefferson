@@ -1,8 +1,7 @@
 /* Section Product Grid */
 .home-products-grid {
     .section_content-body {   
-        > .row { 
-            @extend %border-product-grid;        
+        > .row {             
             @media (max-width: 767px) {
                 @include margin-mobile;
                 > section, > div {
@@ -17,17 +16,7 @@
             }
         }  
     }
-    &.collection-grid1 {
-        .section_content-body {
-            > .row {
-                margin: 0;
-                @extend %radius-4px;
-                background: var(--body-bg-color);
-                > section, > div {
-                    padding: 0;
-                }
-            }
-        } 
+    &.collection-grid1 {        
         .tns-inner {  
             @extend %radius-4px;
             background: var(--body-bg-color); 

@@ -1,8 +1,7 @@
 .section_content-body {
     position: relative;    
     .product-section {        
-		border-bottom: 1px solid var(--body-border-color);  
-		@include border-inline-end(1px, solid, var(--body-border-color)); 
+		margin-bottom: 60px;
 	}
 	.tns-slider {
 		@media (min-width: 768px) {
@@ -14,7 +13,7 @@
 			} 
 		}
 		> .product-section {
-			border-bottom: none;   
+			margin: 0;
 			@media (min-width: 1025px) {
 				&.tns-first {
 					.featured_product__item .featured_product__item-action {
@@ -83,19 +82,12 @@
 	}
 }
 .featured_product__item,
-.empty_card {
-	padding: 16px;
+.empty_card {	
 	height: 100%;
-	position: relative;
-	@media (min-width: 768px) {
-		padding: var(--gutter-sm);
-	}
+	position: relative;	
 	.featured-product_header {
 		position: relative;
-		margin-bottom: var(--gutter-sm);
-		.featured_product__item-header {
-            @extend %radius-4px; 
-        }
+		margin-bottom: var(--gutter-sm);		
 	}
 	.ssw-faveiticon {
 		i {
@@ -287,22 +279,14 @@
 			margin: var(--gutter-xxs) 0 0;  
 		}
 		@media (min-width: 1025px) {
-			@include ab(99%, -1px, n, -1px);      
-			// @include visibility-hidden;
-			background: var(--body-bg-color); 
-			padding: 0 var(--gutter-md) var(--gutter-sm);  
-			border: 1px solid var(--body-border-color);
-			border-top: none;  
-			margin: 0;  
-			// @include translate(0, -30px);
+			@include ab(99%, -1px, n, -1px);      			
+			margin: 0;  			
 			transition: transform 0.45s ease-in-out;
 			width: 100%;
 			position: unset;
-			padding: 0;
-			// margin-top: 50px;
+			padding: 0;			
 		}
-		.product-form {		  
-			// margin-top: 5px;	  
+		.product-form {		  			
 			text-align: center;
 			@media (min-width: 768px) {
 				flex: 1;
