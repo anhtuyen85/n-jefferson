@@ -178,8 +178,7 @@ form {
     text-align: start;
 }
 select, input, textarea {
-    border: none;
-    background: var(--body-border-color);    
+    border: 1px solid #BABCBF;     
     @extend %body-style;
     &:focus {
         border: none;
@@ -192,14 +191,11 @@ input[type="button"] {
     -moz-appearance: none;
     appearance: none;
 }
-select, input {
-    border-radius: var(--border-radius-default);    
-}
 select {
     max-width: 100%;
     padding: 0 var(--gutter-md);
-    height: 46px;
-    line-height: 46px;    
+    height: 48px;
+    line-height: 48px;    
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none; 
@@ -223,7 +219,7 @@ input, textarea {
     }
 }
 input {
-    height: 46px;
+    height: 48px;
 }
 textarea {
     @extend %radius-4px;
@@ -332,10 +328,11 @@ textarea {
 }  
 .btn {
     @extend %point-cursor;
+    @include font-family-normal; 
+    @extend %transition;
     display: inline-block;
     padding: var(--gutter-xxs) 50px;
-    line-height: 27px;
-    @include font-family-normal; 
+    line-height: 27px;    
     text-align: center;
     
 }
@@ -448,23 +445,24 @@ img {
     }
 }
 .label_ui-group {
-    @include ab(-57px, n, n, 0);        
+    @include ab(-43px, n, n, -10px);        
 }
 .label_ui {    
-    line-height: 17px;
-    padding: 0 var(--gutter-xxs);
+    line-height: 40px;
+    padding: var(--gutter-xxs);    
     margin: 0 0 5px;
     font-size: 1.2rem;    
     text-align: center;
     text-transform: uppercase;
-    display: block;
-    border-radius: var(--border-radius-default);
+    display: block;    
+    width: 60px;
+    height: 60px;
     @extend %fw-custom;
+    @extend %radius-circle;
 }
 .label_ui-sale {
     color: var(--sale-lb-cl);
-    background: var(--sale-lb-bgcl);
-    padding: var(--gutter-sm) 14px;
+    background: var(--sale-lb-bgcl);    
 }
 .label_ui-hot {
     color: var(--hot-lb-cl);
@@ -651,16 +649,18 @@ img {
 .breadcrumb-list {
     @extend %list-style-reset;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    padding: var(--gutter-xxs) 0;
-    margin: 0 0 var(--gutter-xxs);
-    overflow: hidden;
-    overflow-x: auto;
+    padding: 25px 0 20px;
+    margin: 0 0 var(--gutter-xxs);    
+    @media (min-width: 768px) {
+        padding: 75px 0 60px;
+    }
     li {
         a {
-            color: var(--breadcrumb-color);
+            color: var(--body-color);
             white-space: nowrap;
-            @extend %font-size-3;
+            font-size: calc(var(--body-font-size) - 0.4rem);
             &:hover {
                 @media (min-width: 1025px) {
                     color: var(--body-link-hover);
@@ -670,12 +670,12 @@ img {
         &.svg-element-ui {
             padding: 0 var(--gutter-xs);
             svg path {
-                fill: var(--breadcrumb-color);
+                color: var(--body-color);
             }
         }
         &.active {
             a {
-                @extend %section-heading-cl;
+                color: var(--body-color);
             }
         }
     }
@@ -790,21 +790,12 @@ img {
         }
     }
 }
-.container-wrapper {
-    margin-bottom: 50px;
-    @media (min-width: 768px) {
-        margin-bottom: 80px;
-    }
-    .container-wrapper {
-        margin: 0;
-    } 
-}
 .page-heading {
     >  h1, > .title {
         @extend %section-heading-cl;
         margin: 0 0 var(--gutter-lg);
         @media (min-width: 768px) {
-            margin-bottom: var(--gutter-xlg);
+            margin-bottom: 90px;
         }
     }
     > div {
@@ -813,7 +804,7 @@ img {
         overflow-x: auto;
         overflow-y: hidden;  
         @media (min-width: 768px) {
-            margin-bottom: var(--gutter-xlg);
+            margin-bottom: 90px;
         }       
         small {
             @include padding-start(var(--gutter-xxs));
@@ -963,4 +954,18 @@ body .wl_sidebar .featured_product__item-info {
     font-size: 44px!important;
     font-weight: 300;
     line-height: 55px;
+}
+#main-content {
+    margin-bottom: 75px;
+    @media (min-width: 768px) {
+        margin-bottom: 105px;
+    }
+}
+.templateIndex, .templateCollection {
+    #main-content {
+        margin-bottom: 0;
+    }
+}
+.spr-badge-starrating .spr-icon {
+    font-size: 25px !important;
 }

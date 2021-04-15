@@ -9,6 +9,9 @@
             display: inline-block;
         }
     }
+    .btn {
+        white-space: nowrap;
+    }
     .card_section-item-inner {
         position: relative;         
     }  
@@ -30,12 +33,27 @@
             height: auto;
             .card_section-text-button,
             .card_section-content-inner {
-                display: flex;
-                flex-direction: row;
+                display: flex;               
                 justify-content: space-between;                
                 text-align: left;
             }
+            .card_section-button {
+                margin-top: 10px;
+                margin-bottom: 25px;
+            }
         }  
+        @media (min-width: 1400px) {
+            .card_section-text-button,
+            .card_section-content-inner {
+                flex-direction: row;
+                .card_section-text-1 {
+                    padding-right: 10px;
+                }
+            }
+            .card_section-button {
+                margin: 0;
+            }
+        }
         &.card_item-has-sub {
             position: relative;
             background: none;
@@ -71,18 +89,16 @@
         font-weight: 300;
         text-transform: uppercase;
         color: var(--body-link);
-        @media (min-width: 991px){
+        @media (min-width: 768px){
             font-size: 44px;
-            line-height: 55px;
-            // max-width: 370px;
-            // width: 100%;
-            margin-bottom: 0;
-            max-width: 65%;
+            line-height: 55px;           
+            margin-bottom: 0;            
             overflow: hidden;
             text-overflow: ellipsis;
             -webkit-line-clamp: 2;
             display: -webkit-box;
             -webkit-box-orient: vertical;
+            max-height: 110px;
         }
     }
     .card_section-text-2 {       
@@ -92,6 +108,8 @@
         display: inline-flex;
         align-items: center;  
         text-align: center;
+        font-family: 'Merriweather';
+        line-height: 30px;
         @media (min-width: 768px) {
             text-align: left;
             padding-top: 20px;

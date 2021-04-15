@@ -3,8 +3,7 @@
     color: var(--topbar-color);
     position: relative;
     min-height: var(--gutter-lg);
-    @extend %font-size-2;
-    font-size: 19px;
+    @extend %font-size-3;    
     @media (max-width: 1300px) {        
         @include padding-end(var(--gutter-lg));
     }

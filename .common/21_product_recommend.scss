@@ -13,20 +13,27 @@
         }
     }
 }
-.section-product-recommendation {
-    margin: 50px 0 0;
-    @media (min-width: 768px) {
-        margin-top: 80px;
-    }
-    .tns-inner { 
-        @extend %radius-4px;
-    }
+.section-product-recommendation {      
     &.bg-image .tns-inner {
         background: var(--body-bg-color);
+    }    
+    .section_title-wrapper {        
+        margin: 0 0 30px;   
+        @media (min-width: 768px) {
+            text-align: left;
+        }
     }
-    &.home-products-grid .tns-slider .product-section.tns-item:not(.tns-slide-active) {
-        @media (max-width: 1024px) {
-            @include border-inline-end(1px, solid, var(--body-border-color));
+    .slide_ui-controls--nav {
+        @include ab(-49px, n, n, 0);
+        display: flex;        
+        button {
+            position: static;
+            margin-left: 22px;
+            &[disabled] {
+                svg path {
+                    fill: #F2F2F4;
+                }
+            }
         }
     }
 }

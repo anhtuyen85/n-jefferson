@@ -11,7 +11,8 @@
         }
     }   
 }
-.card_footer-item {    
+.card_footer-item {  
+    margin: 0 0 25px;  
     .card_footer-title {
         margin: 0 0 17px;
         color: var(--footer-heading-cl);
@@ -98,24 +99,28 @@
             font-size: var(--heading-size-h4);
             margin: 0 0 10px;
         }       
-        .form-subscribe {
-            margin: 25px 0 0;
+        .form-subscribe {            
             display: flex;
-            flex-wrap: wrap; 
-            @media (min-width: 576px) {
-                flex-wrap: nowrap;
-                justify-content: start;
-            }
+            flex-wrap: wrap;            
             .form-control {
+                max-width: 100%;
                 width: 100%; 
-                margin: 0 0 var(--gutter-xxs);
-                @media (min-width: 576px) {
-                    max-width: 280px;
-                    @include margin-end(var(--gutter-xxs)); 
+                margin: 0 0 var(--gutter-xxs);   
+                border: 2px solid var(--btn1-bg-cl);
+                color: var(--btn1-bg-cl);
+                text-align: center;
+                font-weight: 700;
+                @include placeholder {
+                    color: var(--btn1-bg-cl);
+                }
+                &:focus {        
+                    box-shadow: inset 0 0 0 0 var(--main-color);
                 }
             } 
             .btn {
-                margin: 0 0 var(--gutter-xxs); 
+                width: 100%;
+                line-height: 28px;
+                padding: 10px;
             }     
             .form-subscribe-notify {
                 display: flex;
@@ -132,7 +137,7 @@
 }
 .section-footer {
     .section_content-wrapper {
-        padding: var(--gutter-sm) 0;
+        padding: var(--gutter-xs) 0;
         // border-top: 1px solid var(--footer-copyright-border-top);
         > div {
             align-items: center;
@@ -140,10 +145,7 @@
         .copyright-content {
             color: var(--footer-copyright-cl);
             p {
-                margin: 0 0 var(--gutter-xs);
-                @media (min-width: 768px) {
-                    margin: 0; 
-                }
+                margin: 0;               
             }
         }
     }
@@ -168,12 +170,14 @@
         display: none;
     }
     .card_footer-nav {
+        overflow: hidden;
         .navElement {
             display: flex;
             align-items: center;
             color: var(--footer-heading-cl);
             font-weight: 500;
-            font-size: calc(var(--body-font-size) + 0.1rem);               
+            font-size: calc(var(--body-font-size) + 0.1rem);   
+            margin: 50px 0 0;            
             .svg-element-ui {
                 @include padding-end(var(--gutter-xxs));
                 display: flex;

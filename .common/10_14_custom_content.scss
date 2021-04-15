@@ -10,15 +10,14 @@
     .main__text-1 {
         font-size: 5rem;        
         margin: 0 0 var(--gutter-sm);
-        line-height: 1.2;
-        @extend %section-heading-cl;
+        line-height: 1.2;        
         @extend %fw-custom;
     }
     .main__text-2 {
-        font-size: 2.4rem;        
-        line-height: 35px;
+        font-size: var(--body-font-size);        
+        line-height: 30px;
         margin: 0 0 var(--gutter-sm);
-        @extend %section-heading-cl;
+        font-family: "Merriweather";        
     }
     .sub__text-wrapper {
         margin: 0 calc( -1 * var(--gutter-xs));

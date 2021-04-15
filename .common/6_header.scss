@@ -12,9 +12,15 @@ header .horizontal-menu li:hover .lazyload-include {
         position: relative;                     //fix black background hover menu
         z-index: layer(header-relative);  
         .logo-wrapper { 
-            display: flex;  
-            margin-left: 27px;
+            display: flex;              
         } 
+    }
+    .horizontal-menu {
+        + .btn {
+            line-height: 26px;
+            padding: 5px 35px;
+            margin: 21px 0 29px;
+        }
     }
     .logo-site {
         display: inline-flex;
@@ -57,8 +63,7 @@ header .horizontal-menu li:hover .lazyload-include {
     }
 }
 .header-row-1 {
-    @media (min-width: 992px) { 
-        padding: 21px 0 0;
+    @media (min-width: 992px) {         
         position: relative;
         .header-col-2{
             position: static;
@@ -75,24 +80,19 @@ header .horizontal-menu li:hover .lazyload-include {
     position: relative;   
     form {
         display: flex;
-        align-items: center;
-        background: var(--body-border-color);
-        border-radius: var(--border-radius-default);    
+        align-items: center;                   
         border: none;    
-        position: relative; 
-        max-width: 206px;
+        position: relative;         
         padding-top: 3px;
         @media (max-width: 991px){
             max-width: none;
             width: 100%;
         }
-        input {
-            border: none;
+        input {            
             line-height: var(--gutter-sm); 
             width: 100%;            
             color: var(--header-text-color-desk);  
-            padding: var(--gutter-ct) var(--gutter-md);   
-            border: 1px solid var(--body-color);
+            padding: var(--gutter-ct) var(--gutter-md);               
             text-align: center;
             @media (min-width: 992px) {
                 background: none;
@@ -104,10 +104,7 @@ header .horizontal-menu li:hover .lazyload-include {
                 font-size: var(--nav-size);
                 font-weight: 400;
                 text-transform: uppercase;
-            }
-            &:focus {                
-                box-shadow: 0 0 0 0 var(--main-color);
-            }
+            }           
         }
         button {
             padding: var(--gutter-ct) var(--gutter-xs);
@@ -118,7 +115,7 @@ header .horizontal-menu li:hover .lazyload-include {
                 display: flex; 
             }
             svg path {                    
-                stroke: var(--main-color);
+                fill: var(--main-color);
             } 
             position: absolute;
             max-width: 50px;
@@ -128,8 +125,7 @@ header .horizontal-menu li:hover .lazyload-include {
         }
     } 
     /*=== Result search ===*/
-    .form-search--result-list {
-        @include ab(auto, 0, n, n);
+    .form-search--result-list {        
         width: 100%;
         background: var(--body-bg-color);
         z-index: layer(search-list);   
@@ -137,8 +133,7 @@ header .horizontal-menu li:hover .lazyload-include {
         max-height: 80vh; 
         overflow-y: auto;
         overflow-x: hidden; 
-        display: none;  
-        max-width: 206px;
+        display: none;          
         @media (max-width: 991px){
             max-width: none;
             width: 100%;
@@ -230,8 +225,7 @@ header .horizontal-menu li:hover .lazyload-include {
     >div:not([data-dialog-close]) {
         align-items: start;
         margin: 0 auto; 
-        overflow-y: hidden;  
-        height: 100%;
+        overflow-y: hidden;          
         width: 100%;
         top: 0;
         left: 0;
@@ -245,7 +239,7 @@ header .horizontal-menu li:hover .lazyload-include {
             left: 50%;
             transform: translate(-50%, 0%); 
             max-height: calc(100vh - 15%); 
-            padding: 50px var(--gutter-sm) var(--gutter-lg);
+            padding: 50px var(--gutter-lg) var(--gutter-lg);
             border-radius: 4px;    
             max-width: 700px;
         }
@@ -262,15 +256,10 @@ header .horizontal-menu li:hover .lazyload-include {
         height: 100%;
         form { 
             box-shadow: none;
-            position: relative; 
-            background: var(--body-bg-color);
-            border-radius: 0; 
-            border-bottom: 1px solid var(--body-border-color);
+            position: relative;             
+            border-radius: 0;             
             padding-bottom: var(--gutter-xxs);    
-            @media (min-width: 992px) {
-                background: var(--body-border-color);
-                border-radius: var(--border-radius-default);
-                border-bottom: none;
+            @media (min-width: 992px) {                                
                 padding-bottom: 0;    
             }   
             button {
@@ -282,11 +271,7 @@ header .horizontal-menu li:hover .lazyload-include {
         } 
         .form-search--result-list {
             box-shadow: none; 
-            border-radius: 0;
-            max-height: calc(100% - 57px);
-            @media (min-width: 992px) {   
-                max-height: calc(100% - 46px);
-            } 
+            border-radius: 0;                       
             ul li {
                 @media (max-width: 991px) { 
                     margin: 0 var(--gutter-xxs) var(--gutter-xxs);
@@ -433,7 +418,7 @@ header .horizontal-menu li:hover .lazyload-include {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: flex-end;
-                align-items: center;
+                align-items: flex-end;
                 .main-nav{
                     margin-right: 35px;
                 }
@@ -652,12 +637,12 @@ header .horizontal-menu li:hover .lazyload-include {
     display: flex;  
     flex-wrap: wrap;
     align-items: center;
-    > li {     
+    > li {   
+        padding: 21px 0 29px;  
         &:not(:last-child) {            
             @include margin-end(var(--gutter-md));
             @media (min-width: 1230px) {                
-                @include margin-end(var(--gutter-lg));
-                margin-inline-end: 78px;
+                @include margin-end(70px);
             }
         }
         &.nav-mobile {
@@ -675,7 +660,8 @@ header .horizontal-menu li:hover .lazyload-include {
             color: var(--nav-link-color);
             display: flex;            
             align-items: center;
-            padding: 22px 0 12px 0;
+            padding: 5px 0;
+            line-height: 26px;
             position: relative;
         }
         &.nav-dd { 
@@ -740,6 +726,7 @@ header .horizontal-menu li:hover .lazyload-include {
 .header-mobile {
     background: var(--header-bg-mobile);
     padding: var(--gutter-xs) 0; 
+    min-height: 67px;
     .header-row {
         > div {
             align-items: center;
