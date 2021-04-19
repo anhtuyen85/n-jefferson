@@ -14,7 +14,7 @@
 .featured_blog__item {      
     margin: 0 0 var(--gutter-xlg);  
     @media (min-width: 768px) {
-        margin-bottom: 60px;
+        margin-bottom: 70px;
     }
     .featured_blog__item-image {
         @extend %radius-4px;
@@ -42,8 +42,7 @@
     footer {
         .featured_blog__item-title {
             line-height: 1.3;            
-            margin: 0 0 var(--gutter-xxs);
-            @extend %fw-custom-1;
+            margin: 0 0 var(--gutter-xxs);            
             a {
                 @media (min-width: 1025px) {
                     &:hover {
@@ -54,12 +53,15 @@
         }
         .featured_blog__item-info {
             @extend %font-size-3;
+            font-family: 'Nunito Sans', sans-serif;
             .featured_blog__item-publish {
                 @extend %fw-custom;
             }
         }
         .featured_blog__item-excerpt {
             margin: var(--gutter-sm) 0 0; 
+            font-family: 'Merriweather', sans-serif;
+            line-height: 30px;
         }
     }
 }

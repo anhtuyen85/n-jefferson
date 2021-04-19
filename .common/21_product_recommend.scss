@@ -13,7 +13,8 @@
         }
     }
 }
-.section-product-recommendation {      
+.section-product-recommendation {  
+      
     &.bg-image .tns-inner {
         background: var(--body-bg-color);
     }    
@@ -25,7 +26,10 @@
     }
     .slide_ui-controls--nav {
         @include ab(-49px, n, n, 0);
-        display: flex;        
+        display: none;     
+        @media (min-width: 768px) {
+            display: flex;
+        }
         button {
             position: static;
             margin-left: 22px;

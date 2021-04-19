@@ -20,6 +20,12 @@
         font-size: var(--footer-heading-fs);
         font-family: var(--font-heading);
     }
+    .logo-wrapper {
+        text-align: center;
+        @media (min-width: 768px) {
+            text-align: left;
+        }
+    }
     .card_footer-body {
         ul {
             list-style-type: none;
@@ -79,6 +85,10 @@
     .card_footer-social {
         margin: var(--gutter-md) 0 0;
         display: flex;
+        justify-content: center;
+        @media (min-width: 768px) {
+            justify-content: flex-start;
+        }
         span{
             margin-right: var(--gutter-sm);
         }
@@ -144,6 +154,10 @@
         }
         .copyright-content {
             color: var(--footer-copyright-cl);
+            text-align: center;
+            @media (min-width: 768px) {
+                text-align: left;
+            }
             p {
                 margin: 0;               
             }

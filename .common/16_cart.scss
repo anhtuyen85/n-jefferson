@@ -24,7 +24,9 @@
         @include margin-start(9px);  
     }
 }
-.cart-table {        
+.cart-table {   
+    overflow: hidden;     
+    overflow-x: auto;
     .line-title {
         @extend %section-heading-cl;       
         border-bottom: 1px solid #F2F2F4;
@@ -430,8 +432,7 @@
         .section_title-text-1{
             font-size: 24px;
             line-height: 30px;
-            font-weight: 700;
-            margin-left: 40px;
+            font-weight: 700;            
         }
     }
     .slide_ui-controls--nav button{

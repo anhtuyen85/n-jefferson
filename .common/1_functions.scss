@@ -88,10 +88,7 @@
     display: flex;
     align-items: center;
     justify-content: center;  
-    text-align: center;          
-    width: var(--gutter-xlg);
-    height: var(--gutter-xlg);
-    @extend %radius-circle;
+    text-align: center;              
     @extend %point-cursor;
     @include translateY(-50%);
     @media (min-width: 768px) {
@@ -101,10 +98,7 @@
     svg {
         margin: 0 auto; 
         width: 26px;
-        height: 22px;
-        @media (max-width: 767px) {
-            height: var(--gutter-xs);
-        } 
+        height: 22px;       
         path {
             color: var(--main-text-color);
         }
@@ -151,7 +145,7 @@
     font-weight: 700;
 }
 %fw-custom-1 {
-    font-weight: 500;
+    font-weight: 600;
 } 
 %body-font-size {
     font-size: var(--body-font-size);
@@ -252,9 +246,13 @@
 %share-links {
     ul {
         display: flex;
+        justify-content: center;
+        @media (min-width: 768px) {
+            justify-content: flex-start;
+        }
         li {                
             &:not(:last-child) {
-                @include margin-end(var(--gutter-xxs));
+                @include margin-end(23px);
             }
             a {
                 display: flex;
@@ -660,5 +658,5 @@ $layer: (
     map-overlay: 999, 
 );
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');

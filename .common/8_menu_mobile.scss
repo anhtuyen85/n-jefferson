@@ -25,8 +25,7 @@
                 padding-bottom: calc(env(safe-area-inset-bottom)/2); 
             } 
             @media (min-width: 992px) {
-                visibility: hidden;
-                z-index: layer(drawer); 
+                visibility: hidden;                
                 width: 465px;
                 box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);     
             }

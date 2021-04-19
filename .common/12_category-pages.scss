@@ -427,19 +427,7 @@
         .featured_block {
             animation: none; 
         }
-    }
-    @media (min-width: 768px) and (max-width: 1079px) {
-        .collection-toolbar_wrapper {
-            padding: 0 var(--gutter-xs);
-            > div:not(:last-child) {
-                @include margin-end(var(--gutter-xs));
-                @include padding-end(var(--gutter-xs));
-            }
-            .collection-toolbar--center > div:not(:last-child) {
-                @include margin-end(var(--gutter-xs));
-            }
-        }
-    }   
+    }     
 }
 /* Product Grid 2 */
 .layout-grid--2 {
@@ -843,27 +831,17 @@
     display: flex;        
     margin-bottom: 30px; 
     @extend %font-size-3;        
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
         display: none;
+    }
+    .collection-toolbar--left,
+    .collection-toolbar--right {
+        display: none !important; 
     }
     > div {
         display: flex;
         align-items: center;
-        position: relative;
-        &:not(:last-child) {
-            @media (min-width: 768px) {
-                @include padding-end(var(--gutter-lg));
-                @include margin-end(var(--gutter-lg));                
-                &:after {
-                    content: '';
-                    width: 1px;
-                    height: 100%;
-                    background: rgba(var(--main-color-rgba), 0.1);                    
-                    @include translate(0, -50%);
-                    @include ab(50%, n, n, 0);
-                }
-            }           
-        }
+        position: relative;       
     }
     .toolbar_view-list {
         @extend %list-style-reset;
@@ -952,8 +930,7 @@
     .collection-toolbar--center {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
+        align-items: center;        
         flex: 1;              
         > div {            
             height: 100%;
@@ -974,12 +951,12 @@
                     .svg-element-ui {
                         display: flex;                        
                         path {
-                            stroke: var(--body-link);
+                            fill: var(--body-link);
                         }
                     }
                 }
             }
-            @media (min-width: 768px) {               
+            @media (min-width: 992px) {               
                 &.toolbar-filter {
                     @include fixed(50%, 0, n, n);
                     @include translateY(-50%);
@@ -996,7 +973,7 @@
                         display: block;
                     }                   
                     svg path {
-                        stroke: var(--main-text-color) !important;
+                        fill: var(--main-text-color) !important;
                     }                    
                     .toolbar-link--label {
                         font-size: var(--body-font-size);
@@ -1180,6 +1157,16 @@
                 }
             }
         }
+    }
+}
+.templateCollection {
+    @media (min-width: 1920px) {
+        .container-fluid {
+            .layout-grid {
+                padding-left: 65px;
+                padding-right: 130px;
+            }
+        }        
     }
 }
 /* End Category page */

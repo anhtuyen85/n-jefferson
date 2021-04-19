@@ -261,24 +261,14 @@
 		&.show-saving .label_ui-sale:not(.label_ui-sale-percent) {
 			display: none !important;              //important fix product grid v2 
 		}  
-	}
-	.featured_product__item-info{
-		text-align: center;
-		.featured_product__item-name{
-			font-size: 20px;
-			font-weight: bold;
-			line-height: 25px;
-			a{
-				color: var(--section-heading-cl);
-			}
-		}
-	} 
+	}	
 	.featured_product__item-action { 
 		display: none;
 		@media (min-width: 768px) {
 			display: flex;
 			flex-wrap: wrap;
 			align-items: center;
+			justify-content: center;
 			margin: var(--gutter-xxs) 0 0;  
 		}
 		@media (min-width: 1025px) {
@@ -304,9 +294,11 @@
 			text-overflow: ellipsis; 
 			overflow: hidden;
 			@media (min-width: 768px) {
-				padding: 3px 33px; 
+				padding: 3px 10px; 
 				height: auto;
 				line-height: 30px;
+				width: 100%;
+				max-width: 170px;
 			}
 			.svg-element-ui {
 				@media (min-width: 768px) {
@@ -406,11 +398,16 @@
 .featured_product__item-body,
 .card_body, 
 .featured_product__item-footer {
+	text-align: center;
+	.featured_product__item-info {
+		text-align: center;
+	}
 	.featured_product__item-name,
 	.product-name {
-		line-height: 1.44;		
+		line-height: 25px;		
 		font-size: calc(var(--product-item-name) - 0.2rem);
 		margin: 0 0 6px; 
+		font-weight: 700;
 		@media (min-width: 576px) {
 			font-size: var(--product-item-name);
 			margin-bottom: 25px;
@@ -503,8 +500,6 @@
 		}
 	}
 }
-
-
 .btn.cart-waiting {
 	position: relative;
 	background: var(--btn1-hover-bg-cl) !important;   // !important fix hover 2 
@@ -570,6 +565,7 @@
 	}	
 	.featured_product__item-image {
 		@include figure-image;
+		margin: 0 auto 20px;
 	}
 }
 /* End Recent view */ 

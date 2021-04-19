@@ -10,18 +10,11 @@
     .featured_group_tab-header {
         display: block;              
         text-align: center;         
-        margin: 0 calc(-1 * var(--gutter-xs)) var(--gutter-sm); 
-        @media (min-width: 576px) {
-            margin-left: calc(-1 * var(--gutter-xs));
-            margin-right: calc(-1 * var(--gutter-xs));
-        }
+        margin: 0 calc(-1 * var(--gutter-xs)) var(--gutter-xxs);        
         .featured_group_tab-link {
             padding: 0 var(--gutter-xs);
             display: inline-block;
-            margin-bottom: var(--gutter-xxs);
-            @media (min-width: 576px) {
-                padding: 0 var(--gutter-sm);
-            }
+            margin-bottom: var(--gutter-xxs);           
             > a {
                 display: block;
                 line-height: 1.2;                

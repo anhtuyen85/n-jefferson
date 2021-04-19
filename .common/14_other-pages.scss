@@ -1,3 +1,28 @@
+.page-content {
+    h1, h2, h3, h4, h5, h6 {
+        margin: 30px 0;
+    }
+    p {
+        margin: 30px 0;
+        font-family: 'Merriweather',  sans-serif;
+        line-height: 30px;
+        a {
+            color: var(--body-link-hover);
+        }
+    }
+    ul, ol {
+        margin: 30px 0;
+        font-family: 'Merriweather',  sans-serif;
+        line-height: 30px;
+        margin-left: 40px;
+        li {
+            margin: 0 0 10px;
+        }
+        a {
+            color: var(--body-link-hover);
+        }
+    }   
+}
 .page-404 {
     .page-text-content {
         @extend %section-heading-cl;
@@ -38,6 +63,12 @@
     }
 }
 /* Contact page */
+.section-page-contact-template {
+    margin-bottom: -75px;
+    @media (min-width: 768px) {
+        margin-bottom: -105px;
+    }
+}
 .contact-heading {
     h1 {        
         line-height: 1.2;
@@ -127,12 +158,12 @@
             }
         }
         .grid-form-name {
-            @media (min-width: 768px) {
+            @media (min-width: 1200px) {
                 display: flex;
                 margin: 0 -15px !important;
             }
             .form-group {
-                @media (min-width: 768px) {
+                @media (min-width: 1200px) {
                     flex: 0 0 50%;
                     max-width: 50%;
                     padding: 0 15px;
@@ -183,10 +214,16 @@
    top: -140px;
  } 
  .contact-item_left{
-   padding: 70px 70px 40px;
+   padding: 70px 30px 40px;
+   @media (min-width: 1200px) {
+    padding: 70px 70px 40px;
+   }
  }
  .contact-item_right{
-   padding: 70px 85px;
+   padding: 70px 30px;
+   @media (min-width: 1200px) {
+    padding: 70px 85px;
+   }
  }
  .contact-form{
    margin-top: 0;
@@ -257,6 +294,12 @@
 }
 .section_content-wrapper {
     .block-item {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+            @media (min-width: 768px) {
+                margin-bottom: 110px;
+            }
+        }
         .text-title {
             margin-bottom: 27px;
             h3 {
@@ -266,17 +309,21 @@
         }
         .text-1 {
             line-height: 30px;
-            font-family: 'Merriweather';
+            font-family: 'Merriweather',  sans-serif;
         }
         &.text-left {
             text-align: center !important;
             padding: 70px 0;
+            margin: 0;
             @media (min-width: 768px) {
                 padding: 140px 0;
             }
             > div {
                 max-width: 840px;
                 margin: 0 auto;
+                &.text-title {
+                    margin-bottom: 27px;
+                }
             }
             .box-img {
                 margin-bottom: 40px;
@@ -316,7 +363,38 @@
                 .btn {
                     text-transform: uppercase;
                     font-size: calc(var(--body-font-size) + 0.1rem);
-                    padding: 13px 103px;
+                    padding: 13px;
+                    width: 100%;
+                    max-width: 300px;                    
+                }
+            }
+        }
+        .banner-image {
+            position: relative;
+            .banner-content-inner {
+                top: 50%;
+                left: 50%;
+                text-align: center;
+                width: 100%;
+                @include translate(-50%, -50%);
+                .text-1 {
+                    color: #fff;
+                    font-size: 32px;
+                    line-height: 40px;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    font-family: var(--body-font-family);
+                    margin-bottom: 30px;
+                    @media (min-width: 768px) {
+                        font-size: 44px;                        
+                        line-height: 55px;
+                    }
+                }
+                .btn {                    
+                    font-size: calc(var(--body-font-size) + .1rem);
+                    padding: 13px;
+                    width: 100%;
+                    max-width: 300px;
                 }
             }
         }
@@ -814,15 +892,15 @@
         }
     }
     p{
-        font-family: 'Merriweather';
+        font-family: 'Merriweather',  sans-serif;
         margin: 0;
         line-height: 30px;
     }
     .title{
         padding-top: 80px;
-        font-size: 56px;
+        font-size: var(--heading-size-h1);
         line-height: 80px;
-        font-weight: 400;
+        font-weight: 500;
         color: #0C1C40;
         letter-spacing: -0.015em;
         margin-bottom: 0;
@@ -965,8 +1043,7 @@
         }
     }
 }
-#recover-password{
-    padding-top: 75px;
+#recover-password{    
     .title{
         margin-bottom: 16px;
         color: #181818;
