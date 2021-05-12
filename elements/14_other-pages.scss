@@ -757,11 +757,12 @@
     #main-content {
         #searchresults { 
             margin: var(--gutter-lg) 0 0;   
+            @media (min-width: 768px) {
+                margin-top: 65px;
+            }
         }
         .form-search-ui {
-            @media (max-width: 991px) {
-                width: 100%;
-            }
+            width: 100%;
             form {
                 width: 100%;
                 margin: 0 auto;
@@ -806,6 +807,12 @@
     }
 }
 /* wishlist */
+.arn-wishlist-page .page-title {
+    text-align: center;
+    @media (min-width: 768px) {
+        margin: 65px auto;
+    }
+}
 .arn-wishlist-page .page-arn-wishlist table {
     @media (min-width: 768px) {
         display: block;
@@ -1043,16 +1050,16 @@
         }
     }
 }
-#recover-password{    
-    .title{
+#recover-password {    
+    .title {
         margin-bottom: 16px;
         color: #181818;
     }
-    .note{
+    .note {
         line-height: 30px;
         letter-spacing: -0.015em;
     }
-    .action_bottom{
+    .action_bottom {
         >.btn-1{
             width: 100%;
             background: #FCAD37;
@@ -1070,4 +1077,59 @@
     .form-account{
         padding: 52px 0 0;
     }
+}
+#col-main {
+    &.all {
+        padding: 0 5%;
+        @media (min-width: 1680px) {
+            padding-left: 90px;
+            padding-right: 90px;
+        }
+        .addresses {    
+            margin-top: 30px;
+            @media (min-width: 651px) {
+                margin-top: 0;
+                padding: 0;
+            }
+            ul {
+                background: #F9F9F9;
+                padding: 28px 20px;
+                height: 100%;
+                li {
+                    border: none;
+                    padding: 0;
+                    background-position: 0 8px;
+                    font-size: var(--body-font-size);
+                    line-height: 30px;
+                    font-family: var(--font-heading);
+                    font-weight: var(--body-font-weight);
+                    .name {
+                        color: var(--body-color);
+                        font-weight: inherit;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 26px;
+                    }
+                }
+                .distance {
+                    margin: 0;
+                    width: 36px;
+                }
+                .store_website {
+                    margin-left: 36px;
+                }
+            }
+        }
+        .footer_html {
+            margin-top: 30px;
+            text-align: center;
+            @media (min-width: 768px) {
+                margin-top: 65px;
+            }
+        }
+    }
+    #store-locator-title {
+        text-align: center;
+        margin: 65px auto;
+    }    
 }

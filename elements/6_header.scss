@@ -7,12 +7,13 @@ header .horizontal-menu li:hover .lazyload-include {
     visibility: visible;
 }
 .header-desktop {   
-    @media (min-width: 992px) {
+    @media (min-width: 992px) {        
         background: var(--header-bg-desk); 
         position: relative;                     //fix black background hover menu
         z-index: layer(header-relative);  
         .logo-wrapper { 
-            display: flex;              
+            display: flex;   
+            padding: 21px 0 29px;           
         } 
     }
     .horizontal-menu {
@@ -642,7 +643,7 @@ header .horizontal-menu li:hover .lazyload-include {
         &:not(:last-child) {            
             @include margin-end(var(--gutter-md));
             @media (min-width: 1230px) {                
-                @include margin-end(70px);
+                @include margin-end(65px);
             }
         }
         &.nav-mobile {

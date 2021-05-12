@@ -59,12 +59,13 @@
             }
         }
         + div {
-            background: #F9F9F9;            
+            background: #fff;            
             box-shadow: 0 4px 10px rgba(49, 88, 142, 0.25);
             border-radius: 10px;
             padding: 35px 20px 20px;        
             @media (min-width: 768px) {
                 padding: 55px 30px 30px;
+                background: #F9F9F9; 
             }
         }
     } 
@@ -75,8 +76,7 @@
             font-family: 'Merriweather',  sans-serif;
             >span {              
                 display: block;
-                color: var(--body-color);
-                padding: var(--gutter-xxs) var(--gutter-xs);
+                color: var(--body-color);                
             }
         }
     }   

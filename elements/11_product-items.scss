@@ -92,6 +92,18 @@
 		position: relative;
 		margin-bottom: var(--gutter-sm);		
 	}
+	.featured_product__item-col {
+		margin: 0 auto 9px;
+		a {
+			text-transform: uppercase;
+			color: #1179CC;
+			font-weight: 600;
+			font-size: calc(var(--body-font-size) - 0.4rem);
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 	.ssw-faveiticon {
 		i {
 			color: inherit; 
@@ -269,16 +281,8 @@
 			flex-wrap: wrap;
 			align-items: center;
 			justify-content: center;
-			margin: var(--gutter-xxs) 0 0;  
-		}
-		@media (min-width: 1025px) {
-			@include ab(99%, -1px, n, -1px);      			
-			margin: 0;  			
-			transition: transform 0.45s ease-in-out;
-			width: 100%;
-			position: unset;
-			padding: 0;			
-		}
+			margin: 20px 0 0;  
+		}		
 		.product-form {		  			
 			text-align: center;
 			@media (min-width: 768px) {
@@ -406,35 +410,39 @@
 	.product-name {
 		line-height: 25px;		
 		font-size: calc(var(--product-item-name) - 0.2rem);
-		margin: 0 0 6px; 
+		margin: 0; 
 		font-weight: 700;
 		@media (min-width: 576px) {
-			font-size: var(--product-item-name);
-			margin-bottom: 25px;
+			font-size: var(--product-item-name);			
 		}
 		&:hover a {
 			color: var(--body-link-hover); 
 		}
 	}
 	.featured_product__item-review {
-		margin: 0 0 8px;
-		@media (min-width: 768px) {
-			margin-bottom: 15px;
-		}
+		.spr-badge {
+			margin: 8px 0 0;
+			@media (min-width: 768px) {
+				margin-top: 20px;			
+			}
+			&:empty {
+				display: none;
+			}
+		}		
 	}
 	.product-price {
 		// display: none;
 		color:  var(--price-color);
-		font-weight: 800;
+		font-weight: 700;
 		font-size: 16px;
-		font-family: 'Nunito Sans', sans-serif;
-		margin: 0 0 8px;
+		font-family: 'Nunito Sans', sans-serif;		
 		line-height: 1.1;
 		font-size: calc(var(--product-item-price) - 0.4rem);
+		margin: 8px 0 0;
 		@extend %fw-custom-1;
 		@media (min-width: 576px) {
-			font-size: var(--product-item-price);
-			margin-bottom: 20px;
+			font-size: var(--product-item-price);	
+			margin-top: 15px;		
 		}
 		.price-compare {			
 			font-weight: 400;
@@ -484,8 +492,9 @@
 	}
 	.featured_product__item-short-description {
 		margin: 15px 0 0;
-		line-height: 20px;	
-		@extend %section-heading-cl;	
+		line-height: 20px;			
+		font-family: 'Merriweather', sans-serif;	
+		line-height: 24px;
 		@extend %font-size-3;		
 		ul, ol {
 			list-style: none;			

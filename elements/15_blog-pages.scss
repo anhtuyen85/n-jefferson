@@ -188,24 +188,16 @@
                 }
                 textarea {                    
                     color: var(--section-heading-cl);
-                    padding: var(--gutter-sm) 0;
-                    background: none;
-                    border-bottom: 1px solid var(--body-border-color);
+                    padding: var(--gutter-sm) var(--gutter-md);;
+                    background: none;                    
                     border-radius: 0;
-                    min-height: 87px;
-                    &:focus {
-                        box-shadow: inset 0 0 0 0 var(--main-color);
-                        border-bottom-color: var(--main-color);
-                    }
+                    min-height: 87px;                    
                     @include placeholder {                        
                         color: var(--section-heading-cl);
                     }
                 }
             }
-        }
-        .form-button {
-            text-align: center;
-        }
+        }       
     }
     #articleRecommendation {
         margin: 50px 0 0;

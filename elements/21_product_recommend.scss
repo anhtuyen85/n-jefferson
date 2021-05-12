@@ -13,8 +13,8 @@
         }
     }
 }
-.section-product-recommendation {  
-      
+.section-product-recommendation,
+.section-product-recommendation-2 {        
     &.bg-image .tns-inner {
         background: var(--body-bg-color);
     }    
@@ -39,5 +39,11 @@
                 }
             }
         }
+    }
+}
+.section-product-recommendation-2 {
+    margin: 40px 0 0;
+    @media (min-width: 768px) {
+        margin-top: 90px;
     }
 }

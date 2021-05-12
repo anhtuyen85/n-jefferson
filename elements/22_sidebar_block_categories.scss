@@ -93,8 +93,11 @@
                         }
                     }  
                     &.active {
-                        > a {
+                        > a {                            
                             color: var(--body-link-hover);                             
+                            &:before {
+                                border-color: var(--body-link-hover);
+                            }
                         }
                     }                  
                 }

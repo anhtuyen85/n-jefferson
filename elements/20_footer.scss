@@ -188,6 +188,7 @@
         .navElement {
             display: flex;
             align-items: center;
+            justify-content: center;
             color: var(--footer-heading-cl);
             font-weight: 500;
             font-size: calc(var(--body-font-size) + 0.1rem);   

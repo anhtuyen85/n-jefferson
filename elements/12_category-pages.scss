@@ -8,8 +8,8 @@
         background-size: cover;
         background-position: center;
         @media (min-width: 768px) {
-            padding-top: 80px;
-            padding-bottom: 80px;            
+            padding-top: 160px;
+            padding-bottom: 160px;            
         }
         .collection-info {
             max-width: 815px;
@@ -142,16 +142,7 @@
                     transition-delay: 0s;
                 } 
             }
-            .featured_product__item-action {
-                position: static;
-                background: transparent;
-                padding: 0;
-                margin-top: var(--gutter-xxs);
-                border: none;
-                transform: none;
-                transition: none; 
-                opacity: 1;
-                visibility: visible;  
+            .featured_product__item-action {              
                 @media (min-width: 768px) {
                     display: flex;     
                 }

@@ -705,3 +705,15 @@
         }
     }
 }
+.templateProduct {
+    &.modal-opened {        
+        @media (min-width: 768px) {
+            overflow: visible;
+        }
+        #cartShopping.is-open .cart-drawer-wrapper {
+            @media (max-width: 767px) {
+                display: block;
+            }
+        }
+    }
+}
