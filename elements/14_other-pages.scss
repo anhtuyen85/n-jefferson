@@ -1009,13 +1009,17 @@
         max-width: 570px;
         width: 100%;
         margin: auto;
-        text-align: start;
+        text-align: start;        
         h3{
             color: #6CB5CD;
             font-weight: 700;
             font-size: 30px;
             line-height: 38px;
-            font-family: var(--body-font-family);
+            font-family: var(--body-font-family);            
+            a {
+                color: inherit;
+                font-weight: inherit;                                                   
+            }
         }
         p a{
             color: var(--body-link);
@@ -1060,15 +1064,18 @@
         letter-spacing: -0.015em;
     }
     .action_bottom {
-        >.btn-1{
-            width: 100%;
-            background: #FCAD37;
-            border: none;
-            padding: 3px 0;
+        .btn {
             font-size: 18px;
             line-height: 30px;
             font-weight: 700;
             letter-spacing: -0.015em;
+            &:not(:last-child) {
+                margin-right: 25px;
+            }
+        }
+        >.btn-1 {            
+            background: #FCAD37;
+            border-color: #FCAD37;                                                
             box-shadow: inset 0px -8px 16px rgba(225, 218, 218, 0.16), inset 0px -8px 30px rgba(0, 0, 0, 0.1);
             color: #fff!important;
             border-radius: unset;

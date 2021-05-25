@@ -30,6 +30,12 @@
         svg path {
             stroke: var(--topbar-color);
         }
+        &.search-ui-btn {
+            svg path {
+                stroke: none;
+                fill: var(--topbar-color);
+            }
+        }
     }
     .menu-list,
     .list-inline,
