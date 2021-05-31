@@ -378,6 +378,15 @@
 			}
 		}
 	}
+	.featured_product__item-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		.featured_product__item-footer {
+			margin-top: auto;
+		}
+	}
 	&:hover {
 		@media (min-width: 1025px) {             
 			.featured-product_header {

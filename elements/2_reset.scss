@@ -987,3 +987,12 @@ body .wl_sidebar .featured_product__item-info {
 .spr-badge-starrating .spr-icon {
     font-size: 25px !important;
 }
+.alert {
+    color: var(--btn1-bg-cl);
+    margin-bottom: 20px;
+    button {
+        color: inherit;
+        font-size: var(--body-font-size);
+        margin-right: 4px;
+    }
+}

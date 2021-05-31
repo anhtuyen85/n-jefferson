@@ -38,11 +38,10 @@
                     display: inline-block;
                     position: relative;                    
                     &:after {
-                        content: '';
-                        width: 0;
-                        height: 1px;
+                        content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8'%3E%3Cpath fill='%31588e' d='M9.942 1.35L3.535 7.758 0 4.209l1.353-1.348 2.185 2.193L8.59 0l1.35 1.35z'/%3E%3C/svg%3E");                        
                         @extend %transition;
-                        @include ab(n, 0, 0, n);
+                        opacity: 0;
+                        @include ab(-2px, 4px, n, n);
                     }
                 }               
             }             
@@ -97,6 +96,9 @@
                             color: var(--body-link-hover);                             
                             &:before {
                                 border-color: var(--body-link-hover);
+                            }
+                            &:after {
+                                opacity: 1;
                             }
                         }
                     }                  
