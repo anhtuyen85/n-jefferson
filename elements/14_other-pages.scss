@@ -276,16 +276,17 @@
    list-style-type: none;
  }
  .contact__info li{
-   display: flex;
-   align-items: flex-start;
    font-family: "Merriweather ,sans-serif";
-   line-height: 30px;
+   line-height: 30px;   
+   position: relative;
+   padding-left: 37px;
  }
  .contact__info li:not(:last-child){
    margin-bottom: 35px;
  }
  .contact__info .svg-element-ui{
    margin-right: 10px;
+   @include ab(4px, 0, n, n);
  }
 /* About us */
 .section-page-about-template {
@@ -409,6 +410,12 @@
 }
 
 /* Account page */
+#template {
+    margin-top: 40px;
+    @media (min-width: 768px) {
+        margin-top: 80px;
+    }
+}
 .templateCustomersAccount {
     .container-wrapper {
         margin-top: 30px;
@@ -910,8 +917,7 @@
         margin: 0;
         line-height: 30px;
     }
-    .title{
-        padding-top: 80px;
+    .title{        
         font-size: var(--heading-size-h1);
         line-height: 80px;
         font-weight: 500;
@@ -1042,8 +1048,7 @@
             letter-spacing: -0.015em;
             line-height: 80px;
             font-size: 56px;
-            margin-bottom: 0;
-            padding-top: 60px;
+            margin-bottom: 0;            
         }
         .accept-policy{
             display: flex;

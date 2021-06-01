@@ -422,6 +422,8 @@ header .horizontal-menu li:hover .lazyload-include {
                 align-items: flex-end;
                 .main-nav{
                     margin-right: 35px;
+                    display: flex;
+                    flex: 1;
                 }
             }
         }
@@ -638,14 +640,10 @@ header .horizontal-menu li:hover .lazyload-include {
     display: flex;  
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-around;
+    flex: 1;
     > li {   
-        padding: 21px 0 29px;  
-        &:not(:last-child) {            
-            @include margin-end(var(--gutter-md));
-            @media (min-width: 1230px) {                
-                @include margin-end(65px);
-            }
-        }
+        padding: 21px 0 29px;          
         &.nav-mobile {
             @include margin-end(13px);    
             svg path {

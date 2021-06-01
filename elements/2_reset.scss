@@ -208,9 +208,9 @@ select {
     -ms-appearance: none; 
     -o-appearance: none;
     appearance: none;
-    background-repeat: no-repeat;                  
-    background-size: 9px 6px;
-    background-position: calc(100% - 15px) center;
+    background-repeat: no-repeat !important;                  
+    background-size: 9px 6px !important;
+    background-position: calc(100% - 15px) center !important;
 }
 select::-ms-expand {
     display: none;
