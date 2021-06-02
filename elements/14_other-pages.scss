@@ -144,9 +144,9 @@
                 width: 100%;
             }
             textarea {
-                min-height: 46px;
-                max-height: 46px;
-                border-radius: var(--border-radius-default);
+                min-height: 150px;
+                max-height: 150px;
+                border-radius: var(--border-radius-default);                
             }
             div {
                 &:not(:last-child) {

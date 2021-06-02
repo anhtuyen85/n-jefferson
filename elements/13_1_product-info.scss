@@ -455,15 +455,10 @@
             line-height: 1.45;            
         }
         ul {
-            li {
-                line-height: 26px;
-                padding: 6px 0;
-                display: flex;
-                align-items: center;
-                font-size: calc(var(--body-font-size) + 0.2rem);
-                color: var(--price-sale-color);
-                @extend %section-heading-cl;
-                @extend %fw-custom;
+            padding-left: 20px;
+            li {                
+                padding: 3px 0;                
+                align-items: center;                
             }
             svg {                
                 @include margin-end(var(--gutter-ct));
@@ -755,4 +750,7 @@
         max-width: 670px;       
         background: none; 
     }
+}
+.hulkapps-volumes {
+    margin-top: 30px !important;
 }

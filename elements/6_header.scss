@@ -20,7 +20,11 @@ header .horizontal-menu li:hover .lazyload-include {
         + .btn {
             line-height: 26px;
             padding: 5px 35px;
-            margin: 21px 0 29px;
+            margin-top: auto;
+            margin-bottom: auto;
+            height: 36px;
+            position: relative;
+            top: -6px;
         }
     }
     .logo-site {
@@ -418,8 +422,8 @@ header .horizontal-menu li:hover .lazyload-include {
             .header-col-left{
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: flex-end;
-                align-items: flex-end;
+                justify-content: flex-end;     
+                height: 100%;           
                 .main-nav{
                     margin-right: 35px;
                     display: flex;
@@ -516,7 +520,7 @@ header .horizontal-menu li:hover .lazyload-include {
 }
 .h-desk-1, .h-desk-3, .h-desk-4, .h-desk-5 {
     .header-row-1 > div {
-        align-items: center; 
+        // align-items: center; 
     }
 }
 .h-desk-5 { 
@@ -584,7 +588,7 @@ header .horizontal-menu li:hover .lazyload-include {
             display: block;  
             text-align: center;   
             font-weight: 700;
-            @include ab(calc(-1 * var(--gutter-ct)), n, n, 0);
+            @include ab(-8px, n, n, -10px);
             width: 22px;
             height: 22px;
             line-height: 22px;
@@ -625,7 +629,7 @@ header .horizontal-menu li:hover .lazyload-include {
     } 
     .header-col-left {
         display: flex;
-        align-items: center;    
+        height: 100%;
         > .horizontal-menu:not(:last-child),
         > div:not(:last-child) {            
             @include margin-end(var(--gutter-md));
@@ -638,12 +642,14 @@ header .horizontal-menu li:hover .lazyload-include {
 .main-menu {
     @extend %list-style-reset;        
     display: flex;  
-    flex-wrap: wrap;
-    align-items: center;
+    flex-wrap: wrap;    
     justify-content: space-around;
     flex: 1;
     > li {   
         padding: 21px 0 29px;          
+        height: 100%;
+        align-items: center;
+        display: flex;
         &.nav-mobile {
             @include margin-end(13px);    
             svg path {
@@ -662,6 +668,9 @@ header .horizontal-menu li:hover .lazyload-include {
             padding: 5px 0;
             line-height: 26px;
             position: relative;
+            @media (max-width: 1199px) {
+                font-size: 16px;
+            }
         }
         &.nav-dd { 
             position: relative;
