@@ -73,7 +73,7 @@
         overflow: hidden;
         overflow-x: auto;               
         .cart-body-inner {      
-            font-family: 'Merriweather',  sans-serif;
+            font-family: 'Merriweather', serif;
             >span {              
                 display: block;
                 color: var(--body-color);                
@@ -94,7 +94,7 @@
         }     
         td {
             color: var(--body-color);
-            font-family: 'Merriweather',  sans-serif;
+            font-family: 'Merriweather', serif;
             font-weight: 700;
             padding: 10px 0;
             &:nth-child(1) {

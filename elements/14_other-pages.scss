@@ -4,7 +4,7 @@
     }
     p {
         margin: 30px 0;
-        font-family: 'Merriweather',  sans-serif;
+        font-family: 'Merriweather', serif;
         line-height: 30px;
         a {
             color: var(--body-link-hover);
@@ -12,7 +12,7 @@
     }
     ul, ol {
         margin: 30px 0;
-        font-family: 'Merriweather',  sans-serif;
+        font-family: 'Merriweather', serif;
         line-height: 30px;
         margin-left: 40px;
         li {
@@ -276,7 +276,7 @@
    list-style-type: none;
  }
  .contact__info li{
-   font-family: "Merriweather ,sans-serif";
+    font-family: 'Merriweather', serif;
    line-height: 30px;   
    position: relative;
    padding-left: 37px;
@@ -317,7 +317,7 @@
         }
         .text-1 {
             line-height: 30px;
-            font-family: 'Merriweather',  sans-serif;
+            font-family: 'Merriweather', serif;
         }
         &.text-left {
             text-align: center !important;
@@ -913,7 +913,7 @@
         }
     }
     p{
-        font-family: 'Merriweather',  sans-serif;
+        font-family: 'Merriweather', serif;
         margin: 0;
         line-height: 30px;
     }
