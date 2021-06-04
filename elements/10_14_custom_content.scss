@@ -1,10 +1,18 @@
 /* Section Custom content */
 .home-custom-content {    
+    .card_section-image {
+        @media (max-width: 767px) {
+            order: 1;
+        }
+    }
     .card_section-paragraph {
         .card_section-body {
             @media (max-width: 767px) {
                 text-align: center;
             }
+        }
+        @media (max-width: 767px) {
+            order: 2;
         }
     }
     .main__text-1 {

@@ -12,6 +12,17 @@
             max-width: 100%;
         }
     }
+    .feature-product-media {
+        .image__style {
+            padding-top: 120% !important;
+            img {
+                object-fit: contain;
+                transform: translate(-50%, -50%);
+                left: 50%;
+                top: 50%;
+            }
+        }
+    }
     .product-main-media {
         position: relative;
         overflow: hidden;        
@@ -19,7 +30,7 @@
             order: 2;
             flex: 1;
             padding: 0 0 0 15px;
-        }
+        }        
         figure, .image__style, img {
             @extend %radius-4px;
         }
@@ -59,6 +70,9 @@
             width: 20px;
             height: 20px;
             @include ab(n, n, 0, 0);
+        }
+        .image__style {
+            padding-top: 120% !important;
         }
         .image__style, img {
             @extend %radius-4px;
@@ -464,6 +478,11 @@
                 @include margin-end(var(--gutter-ct));
             } 
         }
+        .specs_text {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
         .row {                        
             .flex-box {
                 display: flex;
@@ -749,6 +768,26 @@
         padding: 0 !important;
         max-width: 670px;       
         background: none; 
+    }
+    .hulk-discount-table {
+        background: var(--body-bg-color);
+        padding: 7%;
+        @media (min-width: 576px) {
+            padding: 40px;
+        }
+        table {
+            font-size: 16px;
+            color: #000;
+            th{
+                padding: 8px 15px;
+                border: 1px solid #ccc;
+                background: #eee;
+            }
+            td {
+                padding: 8px 15px;
+                border: 1px solid #ccc; 
+            }
+        }
     }
 }
 .hulkapps-volumes {
