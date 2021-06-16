@@ -103,19 +103,20 @@
             &:nth-child(2) {
                 padding-left: 20px;
                 padding-right: 20px;
-                flex: 0 0 105px;
-                max-width: 105px;
+                flex: 0 0 120px;
+                max-width: 120px;
             }
             &:nth-child(3) {
                 text-align: right;
-                flex: 0 0 80px;
-                max-width: 80px;
+                flex: 0 0 100px;
+                max-width: 100px;
             }
         }
-    }     
+    }        
     .tr-heading {
         display: flex;
         width: 100%;
+        padding-right: 52px;
         td {
             color: var(--body-color);
             padding: 0 0 20px;
@@ -138,6 +139,7 @@
     .cart-item-block {        
         border-bottom: 1px solid var(--body-color);
         display: flex;
+        align-items: center;
         width: 100%;
         td {
             padding: 9px 0 13px;
@@ -146,24 +148,39 @@
                 flex: 1;                
             }
             &:nth-child(2) {
-                flex: 0 0 105px;
-                max-width: 105px;
+                flex: 0 0 120px;
+                max-width: 120px;
             }
             &:nth-child(3) {
                 flex: 0 0 80px;
                 max-width: 80px;
             }
+            .hulkapps-cart-item-price {
+                > span {
+                    display: block;
+                }
+                br {
+                    display: none;
+                }
+            }
+            &.product-remove {
+                padding-left: 15px;
+                svg path {
+                    fill: var(--main-color);
+                }
+            }
         }    
         .product-cart .qty-select {
             input {
-                height: 29px;
-                width: 65px;  
+                height: 29px;                
                 line-height: 29px;
-                padding: 0 15px;
-                text-align: left;
-            }           
-            .qty-minus, .qty-plus {
-                display: none;
+                padding: 0 15px !important;                
+            }    
+            .qty-minus {
+                left: 0;
+            }                   
+            .qty-plus {
+                right: 0;
             }
         }
         >span {

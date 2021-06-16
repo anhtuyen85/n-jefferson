@@ -44,7 +44,8 @@
         transform-origin: 0 0 0;            
     } 
 }
-li.nav-item.is-hover { 
+li.nav-item.is-hover,
+li.nav-item:hover { 
     @media (min-width: 992px) { 
         .block-mega-menu, .dropdown-menu-include  { 
             z-index: layer(dropdown-visible); 

@@ -996,3 +996,21 @@ body .wl_sidebar .featured_product__item-info {
         margin-right: 4px;
     }
 }
+.bulk-search {
+    .bs-item-info {
+        display: flex;
+        flex-direction: column;
+        .title {
+            font-weight: 700;
+        }
+        .sku {
+            font-family: "PT Serif";            
+        }       
+        .price {
+            // color: var(--price-color);
+        }
+    }
+}
+.page-bulkorder-custom {
+    
+}

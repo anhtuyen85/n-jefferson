@@ -650,6 +650,8 @@ header .horizontal-menu li:hover .lazyload-include {
         height: 100%;
         align-items: center;
         display: flex;
+        flex: auto;        
+        min-width: 0;
         &.nav-mobile {
             @include margin-end(13px);    
             svg path {
@@ -663,11 +665,15 @@ header .horizontal-menu li:hover .lazyload-include {
             font-weight: var(--nav-weight);
             // font-weight: 400;
             color: var(--nav-link-color);
-            display: flex;            
-            align-items: center;
-            padding: 5px 0;
-            line-height: 26px;
-            position: relative;
+            display: flex;    
+            justify-content: center; 
+            width: 100%;       
+            align-items: center;           
+            line-height: 26px;            
+            > span {
+                padding: 5px 0;
+                position: relative;
+            }
             @media (max-width: 1199px) {
                 font-size: 16px;
             }
@@ -675,20 +681,21 @@ header .horizontal-menu li:hover .lazyload-include {
         &.nav-dd { 
             position: relative;
         }
-        &:hover, &.active {
+        &:hover, &.active, &.is-hover {
             >a {
                 color: var(--nav-link-hover);
                 font-weight: var(--nav-weight);
                 .svg-element-ui path {
                     fill: var(--nav-link-hover);
                 }
-                &::after{
+                > span:after {
                     position: absolute;
                     content: '';
                     width: 100%;
                     height: 2px;
                     background: #FCAD37;
                     bottom: 2px;
+                    left: 0;
                 }
             }
         }             
