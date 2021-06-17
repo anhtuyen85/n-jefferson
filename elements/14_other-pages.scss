@@ -1152,3 +1152,13 @@
         margin: 65px auto;
     }    
 }
+/* Search */
+div.snize ul.snize-product-filters-list li label > span,
+div.snize *,
+div.snize-search-results#snize_results a,
+div.snize-search-results,
+#snize-search-results-grid-mode li.snize-product span.snize-title ,
+#snize-search-results-grid-mode span.snize-sku, #snize-search-results-grid-mode span.snize-attribute,
+#snize-search-results-grid-mode span.snize-description{
+ font-family: var(--body-font-family);   
+}
