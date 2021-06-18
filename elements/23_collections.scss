@@ -8,6 +8,13 @@
                 @include effect-image-hover;
             }
         }
+        &.col-blank-image {
+            a {
+                padding-top: 100%;
+                display: block;
+                background: #31588e;
+            }
+        }
     }
     .collection-item {
         padding: var(--gutter-xs);

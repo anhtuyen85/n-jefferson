@@ -997,20 +997,25 @@ body .wl_sidebar .featured_product__item-info {
     }
 }
 .bulk-search {
+    li {
+        grid-template-columns: 1fr !important;
+        img {
+            display: none;
+        }
+    }
     .bs-item-info {
         display: flex;
         flex-direction: column;
+        font-family: var(--body-font-family);
         .title {
             font-weight: 700;
+            font-family: inherit;
         }
         .sku {
-            font-family: "PT Serif";            
+            font-family: inherit;
         }       
         .price {
-            // color: var(--price-color);
+            font-family: inherit;
         }
     }
-}
-.page-bulkorder-custom {
-    
 }
