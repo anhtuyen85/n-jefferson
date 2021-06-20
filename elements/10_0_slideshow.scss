@@ -87,7 +87,7 @@
                 }            
             }
             &:not(img) {
-                @extend %absolute-content;    
+                // @extend %absolute-content;    
             }
         }
     }

@@ -742,6 +742,9 @@ header .horizontal-menu li:hover .lazyload-include {
     background: var(--header-bg-mobile);
     padding: var(--gutter-xs) 0; 
     min-height: 67px;
+    .logo-wrapper img {
+        width: 100%;
+    }
     .header-row {
         > div {
             align-items: center;
